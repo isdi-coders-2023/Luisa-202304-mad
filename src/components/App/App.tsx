@@ -1,4 +1,3 @@
-
 import { Menu } from "../menu/menu";
 import { MenuOptions } from "../../types/menu.options";
 import { AppRoutes } from "../app.routes/app.routes";
