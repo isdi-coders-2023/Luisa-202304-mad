@@ -2,6 +2,7 @@ import { Menu } from "../menu/menu";
 import { MenuOptions } from "../../types/menu.options";
 import { AppRoutes } from "../app.routes/app.routes";
 import { Footer } from "../footer/footer";
+import { Header } from "../header/Header";
 
 export function App() {
   const label = "Desde fuera";
@@ -16,6 +17,7 @@ export function App() {
 
   return (
     <>
+      <Header></Header>
       <Footer></Footer>
     </>
   );
