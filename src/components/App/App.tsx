@@ -1,3 +1,4 @@
+
 import { Menu } from "../menu/menu";
 import { MenuOptions } from "../../types/menu.options";
 import { AppRoutes } from "../app.routes/app.routes";
@@ -15,9 +16,6 @@ export function App() {
 
   return (
     <>
-      <Header></Header>
-      <Menu options={options}></Menu>
-      <AppRoutes></AppRoutes>
       <Footer></Footer>
     </>
   );
