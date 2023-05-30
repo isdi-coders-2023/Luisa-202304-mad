@@ -1,8 +1,12 @@
+
+import { Home } from "../home/home";
+
 import { Menu } from "../menu/menu";
 import { MenuOptions } from "../../types/menu.options";
 import { AppRoutes } from "../app.routes/app.routes";
 import { Footer } from "../footer/footer";
 import { Header } from "../header/Header";
+
 
 export function App() {
   const options: MenuOptions = [
@@ -16,11 +20,15 @@ export function App() {
 
   return (
     <>
+
+      <Home></Home>
+
       <Header></Header>
       <Menu options={options}></Menu>
 
       <AppRoutes></AppRoutes>
       <Footer></Footer>
+
     </>
   );
 }
