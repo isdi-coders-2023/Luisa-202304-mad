@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import styles from "./home.module.scss";
 
@@ -43,5 +44,4 @@ export function Home() {
         );
       })}
     </ul>
-  );
-}
+
