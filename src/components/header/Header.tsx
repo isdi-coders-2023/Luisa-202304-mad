@@ -1,14 +1,10 @@
-import "./Header.scss";
+import "./Header.modules.scss";
 
 export function Header() {
   return (
     <>
       <header className="header">
-        <img
-          src="../../public/Rick-and-Morty-removebg-preview.png"
-          alt="logo"
-          height="10%"
-        />
+        <img src="../../public/package.png" alt="logo" width="30%" />
       </header>
     </>
   );

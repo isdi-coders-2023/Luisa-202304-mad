@@ -1,0 +1,29 @@
+.app {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.characterCard {
+  display: flex;
+  flex-direction: row;
+  border: greenyellow solid 4px;
+  border-radius: 10px;
+  gap: 1rem;
+  align-items: center;
+  height: fit-content;
+}
+
+.image {
+  border-radius: 10px;
+  align-items: baseline;
+}
