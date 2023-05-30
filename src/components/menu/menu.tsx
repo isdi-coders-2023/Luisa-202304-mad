@@ -8,7 +8,7 @@ type PropsType = {
 export function Menu({ options }: PropsType) {
   return (
     <nav>
-      <p>Soy un menu</p>
+      <p>Where do you want to go?</p>
       <ul>
         {options.map((item) => (
           <li key={item.label}>

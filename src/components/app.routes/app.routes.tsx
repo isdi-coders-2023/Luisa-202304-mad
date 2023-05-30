@@ -2,30 +2,31 @@ import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
 const Home = lazy(() => import("../home/home"));
-const myCharacters = lazy(() => import("../mycharacters/mycharacters"));
-const characterDetails = lazy(
+const Error = lazy(() => import("../errorpage/errorpage"));
+const Mycharacters = lazy(() => import("../mycharacters/mycharacters"));
+const CharacterDetails = lazy(
   () => import("../characterdetails/characterdetails")
 );
-const addForm = lazy(() => import("../addform/addform"));
-const editForm = lazy(() => import("../editform/editform"));
-const errorPage = lazy(() => import("../errorpage/errorpage"));
+const AddForm = lazy(() => import("../addform/addform"));
+const EditForm = lazy(() => import("../editform/editform"));
 
 export function AppRoutes() {
   return (
     <Suspense>
       <Routes>
-        <Route path="" element={<Home></Home>}></Route>
+        <Route path={"/"} element={<Home></Home>}></Route>
+        <Route path={"Error404"} element={<Error></Error>}></Route>
         <Route
-          path="myCharacters"
-          element={<MyCharacters></MyCharacters>}
+          path={"MyCharacters"}
+          element={<Mycharacters></Mycharacters>}
         ></Route>
         <Route
-          path="characterDetails"
+          path={"CharacterDetails"}
           element={<CharacterDetails></CharacterDetails>}
         ></Route>
-        <Route path="addForm" element={<AddForm></AddForm>}></Route>
-        <Route path="editForm" element={<EditForm></EditForm>}></Route>
-        <Route path="Error404" element={<ErrorPage></ErrorPage>}></Route>
+        <Route path={"AddForm"} element={<AddForm></AddForm>}></Route>
+        <Route path={"EditForm"} element={<EditForm></EditForm>}></Route>
+        <Route path={"Error404"} element={<Error></Error>}></Route>
       </Routes>
     </Suspense>
   );
