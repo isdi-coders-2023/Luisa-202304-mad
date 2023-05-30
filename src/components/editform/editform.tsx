@@ -1,6 +1,6 @@
 export default function Editform() {
   return (
-    <div>
+    <div className="loaded-route">
       <h2>Formulario:</h2>
       <form>
         <label htmlFor="text">Edítame lo que quieras</label>

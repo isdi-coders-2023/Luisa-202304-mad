@@ -1,6 +1,6 @@
 export default function Error() {
   return (
-    <div>
+    <div className="loaded-route">
       <h2>Error 404 hdp</h2>
     </div>
   );
