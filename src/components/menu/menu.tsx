@@ -8,7 +8,7 @@ type PropsType = {
 
 export function Menu({ options }: PropsType) {
   return (
-    <nav className="menu">
+    <nav className={styles.menu}>
       <ul>
         {options.map((item) => (
           <li key={item.label}>
