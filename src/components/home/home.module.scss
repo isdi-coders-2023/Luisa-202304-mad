@@ -1,24 +1,27 @@
-ul {
-  padding: 0;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
-  list-style: none;
-  padding: 1rem;
-}
+.loadedRoute {
+  width: 100%;
 
-.characterCard {
-  display: flex;
-  flex-direction: row;
-  border: greenyellow solid 4px;
-  border-radius: 10px;
-  gap: 1rem;
-  align-items: center;
-  height: fit-content;
-}
+  ul {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }
 
-.image {
-  border-radius: 10px;
-  align-items: baseline;
+  .characterCard {
+    display: flex;
+    flex-direction: row;
+    border: greenyellow solid 4px;
+    border-radius: 10px;
+    gap: 1rem;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .image {
+    border-radius: 10px;
+    align-items: baseline;
+  }
 }

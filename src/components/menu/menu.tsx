@@ -1,6 +1,6 @@
 import { MenuOptions } from "../../types/menu.options";
 import { Link } from "react-router-dom";
-import "./menu.scss";
+import styles from "./menu.module.scss";
 
 type PropsType = {
   options: MenuOptions;
@@ -8,7 +8,7 @@ type PropsType = {
 
 export function Menu({ options }: PropsType) {
   return (
-    <nav>
+    <nav className="menu">
       <ul>
         {options.map((item) => (
           <li key={item.label}>

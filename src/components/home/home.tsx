@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import styles from "./home.module.scss";
 
@@ -8,10 +7,7 @@ type resultProps = {
   id: string;
 };
 
-
 export default function Home() {
-
-
   const [result, setResult] = useState<resultProps[]>([]);
 
   useEffect(() => {
@@ -25,8 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-
-    <div className="loaded-route">
+    <div className={styles.loadedRoute}>
       <ul className={styles.app}>
         {result.map((item) => {
           return (
@@ -52,4 +47,3 @@ export default function Home() {
     </div>
   );
 }
-
