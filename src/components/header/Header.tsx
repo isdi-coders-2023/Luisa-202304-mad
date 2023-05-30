@@ -1,3 +1,5 @@
+import "./Header.scss";
+
 export function Header() {
   return (
     <>
@@ -5,6 +7,7 @@ export function Header() {
         <img
           src="../../public/Rick-and-Morty-removebg-preview.png"
           alt="logo"
+          height="10%"
         />
       </header>
     </>

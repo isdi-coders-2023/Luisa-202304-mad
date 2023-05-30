@@ -5,7 +5,6 @@ import { Footer } from "../footer/footer";
 import { Header } from "../header/Header";
 
 export function App() {
-  const label = "Desde fuera";
   const options: MenuOptions = [
     { url: "", label: "Home" },
     { url: "myCharacters", label: "My Characters" },
@@ -18,6 +17,9 @@ export function App() {
   return (
     <>
       <Header></Header>
+      <Menu options={options}></Menu>
+
+      <AppRoutes></AppRoutes>
       <Footer></Footer>
     </>
   );
