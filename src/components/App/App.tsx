@@ -1,7 +1,9 @@
+import { Home } from "../home/home";
+
 export function App() {
   return (
     <>
-      <div></div>
+      <Home></Home>
     </>
   );
 }
