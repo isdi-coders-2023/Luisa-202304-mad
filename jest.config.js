@@ -10,5 +10,4 @@ export default {
       "<rootDir>/__mocks__/assetsMock.js",
     "\\.(css|scss)$": "identity-obj-proxy",
   },
-  coveragePathIgnorePatterns,
 };
