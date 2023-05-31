@@ -12,7 +12,7 @@ export function Menu({ options }: PropsType) {
       <ul>
         {options.map((item) => (
           <li key={item.label}>
-            <Link to={item.url}>{item.label}</Link>
+            <Link to={item.path}>{item.label}</Link>
           </li>
         ))}
       </ul>

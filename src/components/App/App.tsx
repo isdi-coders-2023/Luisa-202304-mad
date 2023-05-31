@@ -5,20 +5,20 @@ import { Footer } from "../footer/footer";
 import { Header } from "../header/Header";
 import "./App.scss";
 
+const options: MenuOptions = [
+  { path: "/", label: "Home" },
+  { path: "myCharacters", label: "My Characters" },
+  { path: "characterDetails", label: "Character Details" },
+  { path: "addForm", label: "Add Form" },
+  { path: "editForm", label: "Edit Form" },
+  { path: "Error404", label: "Error 404" },
+];
 export function App() {
-  const options: MenuOptions = [
-    { url: "", label: "Home" },
-    { url: "myCharacters", label: "My Characters" },
-    { url: "characterDetails", label: "Character Details" },
-    { url: "addForm", label: "Add Form" },
-    { url: "editForm", label: "Edit Form" },
-    { url: "Error404", label: "Error 404" },
-  ];
-
   return (
     <>
-      <Header></Header>
-      <Menu options={options}></Menu>
+      <Header>
+        <Menu options={options}></Menu>
+      </Header>
       <AppRoutes></AppRoutes>
       <Footer></Footer>
     </>

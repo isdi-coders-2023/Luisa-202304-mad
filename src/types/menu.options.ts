@@ -1,4 +1,4 @@
 export type MenuOptions = {
-  url: string;
+  path: string;
   label: string;
 }[];
