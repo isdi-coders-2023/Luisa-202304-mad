@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Boogaloo", cursive;
+  font-size: 24px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+}
+
+.character {
+  display: flex;
+  flex-direction: column;
+}
