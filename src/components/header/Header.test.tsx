@@ -4,7 +4,11 @@ import { Header } from "./Header";
 
 describe("Header component", () => {
   test("renders header with logo", () => {
-    render(<Header />);
+    render(
+      <Header>
+        <p>Test</p>
+      </Header>
+    );
 
     const logoElement = screen.getByAltText("logo");
 

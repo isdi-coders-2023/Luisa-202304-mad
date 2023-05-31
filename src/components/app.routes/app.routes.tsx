@@ -15,18 +15,17 @@ export function AppRoutes() {
     <Suspense>
       <Routes>
         <Route path={"/"} element={<Home></Home>}></Route>
-        <Route path={"Error404"} element={<Error></Error>}></Route>
         <Route
-          path={"MyCharacters"}
+          path={"/MyCharacters"}
           element={<Mycharacters></Mycharacters>}
         ></Route>
         <Route
-          path={"CharacterDetails"}
+          path={"/CharacterDetails"}
           element={<CharacterDetails></CharacterDetails>}
         ></Route>
-        <Route path={"AddForm"} element={<AddForm></AddForm>}></Route>
-        <Route path={"EditForm"} element={<EditForm></EditForm>}></Route>
-        <Route path={"Error404"} element={<Error></Error>}></Route>
+        <Route path={"/AddForm"} element={<AddForm></AddForm>}></Route>
+        <Route path={"/EditForm"} element={<EditForm></EditForm>}></Route>
+        <Route path={"*"} element={<Error></Error>}></Route>
       </Routes>
     </Suspense>
   );
