@@ -1,29 +1,16 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import styles from "./home.module.scss";
-
-type resultProps = {
-  image: string;
-  name: string;
-  id: string;
-};
+import { AppContext } from "../../context/app.context";
 
 export default function Home() {
-  const [result, setResult] = useState<resultProps[]>([]);
-
-  useEffect(() => {
-    const api = async () => {
-      const data = await fetch("https://rickandmortyapi.com/api/character", {});
-      const jsonData = await data.json();
-      setResult(jsonData.results);
-    };
-
-    api();
-  }, []);
+  const {
+    characterContext: { character },
+  } = useContext(AppContext);
 
   return (
     <div className={styles.loadedRoute}>
       <ul className={styles.app}>
-        {result.map((item) => {
+        {character.map((item) => {
           return (
             <>
               <div className={styles.characterCard}>
