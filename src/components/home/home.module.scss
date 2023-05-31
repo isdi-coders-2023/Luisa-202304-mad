@@ -7,7 +7,6 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
   }
 
   .characterCard {
@@ -15,7 +14,7 @@
     flex-direction: row;
     border: greenyellow solid 4px;
     border-radius: 10px;
-    gap: 1rem;
+
     align-items: center;
     height: fit-content;
   }
