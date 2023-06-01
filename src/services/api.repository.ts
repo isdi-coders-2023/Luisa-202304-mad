@@ -1,5 +1,5 @@
 export class ApiRepository<T extends { id: string | number }> {
-  url = "https://rickandmortyapi.com/api/character";
+  constructor(public url: string) {}
 
   async getAll() {
     const response = await fetch(this.url);
