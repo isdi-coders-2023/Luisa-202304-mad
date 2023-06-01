@@ -26,7 +26,7 @@ export function AppRoutes() {
         ></Route>
         <Route path={"AddForm"} element={<AddForm></AddForm>}></Route>
         <Route path={"EditForm"} element={<EditForm></EditForm>}></Route>
-        <Route path={"Error404"} element={<Error></Error>}></Route>
+        <Route path={"*"} element={<Error></Error>}></Route>
       </Routes>
     </Suspense>
   );
