@@ -1,21 +1,29 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useReducer } from "react";
 import { ApiRepository } from "../services/api.repository";
 import { Character } from "../models/character";
+import { CharacterState, characterReducer } from "../reducers/reducer";
+import * as ac from "../reducers/actions.creator";
 
 export function useCharacter() {
-  const [character, setCharacter] = useState<Character[]>([]);
+  const initialState: CharacterState = {
+    character: [],
+  };
+
+  const [characterState, dispatch] = useReducer(characterReducer, initialState);
+
+  const url = "https://rickandmortyapi.com/api/character";
 
   const repo: ApiRepository<Character> = useMemo(
-    () => new ApiRepository<Character>(),
+    () => new ApiRepository<Character>(url),
     []
   );
 
   const handleLoad = useCallback(async () => {
     const loadedCharacter = await repo.getAll();
-
+    const characterResults = loadedCharacter.results;
     // eslint-disable-next-line no-console
-    console.log(loadedCharacter);
-    setCharacter(loadedCharacter.results);
+    console.log(characterResults);
+    dispatch(ac.loadCharacterAction(characterResults));
   }, [repo]);
 
   useEffect(() => {
@@ -23,7 +31,7 @@ export function useCharacter() {
   }, [handleLoad]);
 
   return {
-    character,
+    character: characterState.character,
     handleLoad,
   };
 }
