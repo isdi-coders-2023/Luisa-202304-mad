@@ -14,7 +14,6 @@ export const characterReducer = (
   switch (action.type) {
     case actionTypes.load:
       payload = action.payload as Character[];
-
       return { ...state, character: payload };
 
     default:
