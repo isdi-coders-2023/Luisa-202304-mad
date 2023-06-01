@@ -8,7 +8,6 @@ import "./App.scss";
 const options: MenuOptions = [
   { path: "/", label: "Home" },
   { path: "myCharacters", label: "My Characters" },
-  { path: "characterDetails", label: "Character Details" },
   { path: "addForm", label: "Add Form" },
   { path: "editForm", label: "Edit Form" },
   { path: "Error404", label: "Error 404" },

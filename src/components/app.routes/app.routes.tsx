@@ -20,7 +20,7 @@ export function AppRoutes() {
           element={<Mycharacters></Mycharacters>}
         ></Route>
         <Route
-          path={"/CharacterDetails"}
+          path={"/CharacterDetails/:id"}
           element={<CharacterDetails></CharacterDetails>}
         ></Route>
         <Route path={"/AddForm"} element={<AddForm></AddForm>}></Route>
