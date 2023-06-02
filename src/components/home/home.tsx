@@ -4,7 +4,6 @@ import { AppContext } from "../../context/app.context";
 import { Button } from "../buttons/buttons";
 import { Link } from "react-router-dom";
 
-
 export default function Home() {
   const {
     characterContext: { character },
@@ -15,24 +14,22 @@ export default function Home() {
       <ul className={styles.app}>
         {character.map((item) => {
           return (
-            <>
-              <Link to={"/CharacterDetails/" + item.id}>
-                <div className={styles.characterCard}>
-                  <div className={styles.cardImage}>
-                    <img
-                      className={styles.image}
-                      src={item.image}
-                      alt={styles.characterPortrait}
-                      width={80}
-                    />
-                  </div>
-                  <div>
-                    <p className={styles.id}>#{item.id}</p>
-                    <p className={styles.name}>{item.name}</p>
-                  </div>
+            <Link key={item.id} to={"/CharacterDetails/" + item.id}>
+              <div className={styles.characterCard}>
+                <div className={styles.cardImage}>
+                  <img
+                    className={styles.image}
+                    src={item.image}
+                    alt={styles.characterPortrait}
+                    width={80}
+                  />
                 </div>
-              </Link>
-            </>
+                <div className="info">
+                  <p className={styles.id}>#{item.id}</p>
+                  <p className={styles.name}>{item.name}</p>
+                </div>
+              </div>
+            </Link>
           );
         })}
       </ul>
