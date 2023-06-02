@@ -4,7 +4,6 @@ import { AppContext } from "../../context/app.context";
 import { Button } from "../buttons/buttons";
 import { Link } from "react-router-dom";
 
-
 export default function Home() {
   const {
     characterContext: { character },
@@ -16,7 +15,7 @@ export default function Home() {
         {character.map((item) => {
           return (
             <>
-              <Link to={"/CharacterDetails/" + item.id}>
+              <Link key={item.id} to={"/CharacterDetails/" + item.id}>
                 <div className={styles.characterCard}>
                   <div className={styles.cardImage}>
                     <img
