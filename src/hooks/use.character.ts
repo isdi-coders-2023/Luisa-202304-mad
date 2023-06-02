@@ -27,7 +27,7 @@ export function useCharacter() {
       const characterResults = loadedCharacter.results;
       dispatch(ac.loadCharacterAction(characterResults));
       dispatch(ac.NextCharacterAction(loadedCharacter.info.next));
-      dispatch(ac.PreviousCharacterAction(loadedCharacter.info.prev));
+      dispatch(ac.PrevCharacterAction(loadedCharacter.info.prev));
     },
     [repo]
   );

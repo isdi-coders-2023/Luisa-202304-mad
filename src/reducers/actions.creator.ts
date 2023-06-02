@@ -5,12 +5,26 @@ type Keys = keyof typeof actionTypes;
 
 export type CharacterAction = {
   type: (typeof actionTypes)[Keys];
-  payload: Character[] | Character | number;
+  payload: Character[] | Character | number | string;
 };
 
 export function loadCharacterAction(payload: Character[]): CharacterAction {
   return {
     type: actionTypes.load,
+    payload,
+  };
+}
+
+export function NextCharacterAction(payload: Character[]): CharacterAction {
+  return {
+    type: actionTypes.next,
+    payload,
+  };
+}
+
+export function PrevCharacterAction(payload: Character[]): CharacterAction {
+  return {
+    type: actionTypes.prev,
     payload,
   };
 }
