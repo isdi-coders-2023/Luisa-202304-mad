@@ -12,7 +12,7 @@ export default function Error() {
           </p>
           <img
             src="../../portal.png"
-            alt="Rick and Morty go outside the portal"
+            alt="Rick and Morty going outside the portal"
             width="70%"
           ></img>
           <div className={styles.error404}>

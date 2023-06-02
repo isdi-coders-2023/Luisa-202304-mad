@@ -1,18 +1,26 @@
+
 @media screen and (max-width: 1200px) {
+
+@media screen and (min-width: 300px) {
+
   .message {
     position: absolute;
     display: block;
     color: black;
     font-family: "Electrolize", sans-serif;
-    font-size: 35px;
-    padding: 0;
+
+    font-size: 30px;
+    margin: 10px;
+    top: 200px;
   }
+
   .error404 {
     position: relative;
     display: block;
-    font-size: 136px;
+    font-size: 100px;
     margin: 0%;
-    top: -200px;
+    top: -100px;
+
   }
   p {
     margin: 0;

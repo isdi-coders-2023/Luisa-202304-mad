@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useMemo, useReducer } from "react";
 import { ApiRepository } from "../services/api.repository";
 import { Character } from "../models/character";
-import { CharacterState, characterReducer } from "../reducer/reducer";
-import * as ac from "../reducer/actions.creator";
+
+import { CharacterState, characterReducer } from "../reducers/reducer";
+import * as ac from "../reducers/actions.creator";
 
 export function useCharacter() {
   const initialState: CharacterState = {
@@ -24,12 +25,6 @@ export function useCharacter() {
     async (url: string) => {
       const loadedCharacter = await repo.getAll(url);
       const characterResults = loadedCharacter.results;
-      // eslint-disable-next-line no-console
-      console.log(
-        loadedCharacter.results,
-        loadedCharacter.info.next,
-        loadedCharacter.info.prev
-      );
       dispatch(ac.loadCharacterAction(characterResults));
       dispatch(ac.NextCharacterAction(loadedCharacter.info.next));
       dispatch(ac.PreviousCharacterAction(loadedCharacter.info.prev));

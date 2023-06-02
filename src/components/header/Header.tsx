@@ -6,7 +6,7 @@ export function Header({ children }: HeaderProps) {
   return (
     <>
       <header className="header">
-        <img src="../../public/package.png" alt="logo" width="30%" />
+        <img src="../../package.png" alt="logo" width="30%" />
         {children}
       </header>
     </>
