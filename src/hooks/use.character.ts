@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useMemo, useReducer } from "react";
 import { ApiRepository } from "../services/api.repository";
 import { Character } from "../models/character";
-
 import { CharacterState, characterReducer } from "../reducers/reducer";
 import * as ac from "../reducers/actions.creator";
 
