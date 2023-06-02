@@ -1,12 +1,15 @@
 import { useCallback, useEffect, useMemo, useReducer } from "react";
 import { ApiRepository } from "../services/api.repository";
 import { Character } from "../models/character";
+
 import { CharacterState, characterReducer } from "../reducers/reducer";
 import * as ac from "../reducers/actions.creator";
 
 export function useCharacter() {
   const initialState: CharacterState = {
     character: [],
+    next: "",
+    prev: "",
   };
 
   const [characterState, dispatch] = useReducer(characterReducer, initialState);
@@ -18,20 +21,25 @@ export function useCharacter() {
     []
   );
 
-  const handleLoad = useCallback(async () => {
-    const loadedCharacter = await repo.getAll();
-    const characterResults = loadedCharacter.results;
-    // eslint-disable-next-line no-console
-    console.log(characterResults);
-    dispatch(ac.loadCharacterAction(characterResults));
-  }, [repo]);
+  const handleLoad = useCallback(
+    async (url: string) => {
+      const loadedCharacter = await repo.getAll(url);
+      const characterResults = loadedCharacter.results;
+      dispatch(ac.loadCharacterAction(characterResults));
+      dispatch(ac.NextCharacterAction(loadedCharacter.info.next));
+      dispatch(ac.PreviousCharacterAction(loadedCharacter.info.prev));
+    },
+    [repo]
+  );
 
   useEffect(() => {
-    handleLoad();
+    handleLoad(url);
   }, [handleLoad]);
 
   return {
     character: characterState.character,
+    next: characterState.next,
+    prev: characterState.prev,
     handleLoad,
   };
 }

@@ -4,6 +4,7 @@ import { AppRoutes } from "../app.routes/app.routes";
 import { Footer } from "../footer/footer";
 import { Header } from "../header/Header";
 import "./App.scss";
+import { Button } from "../buttons/buttons";
 
 const options: MenuOptions = [
   { path: "/", label: "Home" },

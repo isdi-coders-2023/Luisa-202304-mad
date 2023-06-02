@@ -1,5 +1,4 @@
 import { createContext } from "react";
-
 import { useCharacter } from "../hooks/use.character";
 
 export type ContextStructure = {

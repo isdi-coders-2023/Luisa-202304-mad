@@ -57,6 +57,7 @@ body {
 
 .loaded-route {
   display: flex;
+  flex-direction: column;
   min-height: 67vh;
   justify-content: center;
   align-items: center;
