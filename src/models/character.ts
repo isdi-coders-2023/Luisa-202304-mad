@@ -3,4 +3,6 @@ export type Character = {
   id: string;
   name: string;
   image: string;
+  next: string;
+  prev: string;
 };

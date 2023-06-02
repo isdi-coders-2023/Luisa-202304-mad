@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import styles from "./home.module.scss";
 import { AppContext } from "../../context/app.context";
+import { Button } from "../buttons/buttons";
 
 export default function Home() {
   const {
@@ -31,6 +32,7 @@ export default function Home() {
           );
         })}
       </ul>
+      <Button></Button>
     </div>
   );
 }

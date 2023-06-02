@@ -1,29 +1,50 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useReducer } from "react";
 import { ApiRepository } from "../services/api.repository";
 import { Character } from "../models/character";
+import { CharacterState, characterReducer } from "../reducer/reducer";
+import * as ac from "../reducer/actions.creator";
 
 export function useCharacter() {
-  const [character, setCharacter] = useState<Character[]>([]);
+  const initialState: CharacterState = {
+    character: [],
+    next: "",
+    prev: "",
+  };
+
+  const [characterState, dispatch] = useReducer(characterReducer, initialState);
+
+  const url = "https://rickandmortyapi.com/api/character";
 
   const repo: ApiRepository<Character> = useMemo(
-    () => new ApiRepository<Character>(),
+    () => new ApiRepository<Character>(url),
     []
   );
 
-  const handleLoad = useCallback(async () => {
-    const loadedCharacter = await repo.getAll();
-
-    // eslint-disable-next-line no-console
-    console.log(loadedCharacter);
-    setCharacter(loadedCharacter.results);
-  }, [repo]);
+  const handleLoad = useCallback(
+    async (url: string) => {
+      const loadedCharacter = await repo.getAll(url);
+      const characterResults = loadedCharacter.results;
+      // eslint-disable-next-line no-console
+      console.log(
+        loadedCharacter.results,
+        loadedCharacter.info.next,
+        loadedCharacter.info.prev
+      );
+      dispatch(ac.loadCharacterAction(characterResults));
+      dispatch(ac.NextCharacterAction(loadedCharacter.info.next));
+      dispatch(ac.PreviousCharacterAction(loadedCharacter.info.prev));
+    },
+    [repo]
+  );
 
   useEffect(() => {
-    handleLoad();
+    handleLoad(url);
   }, [handleLoad]);
 
   return {
-    character,
+    character: characterState.character,
+    next: characterState.next,
+    prev: characterState.prev,
     handleLoad,
   };
 }

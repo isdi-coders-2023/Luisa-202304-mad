@@ -1,8 +1,8 @@
 export class ApiRepository<T extends { id: string | number }> {
-  url = "https://rickandmortyapi.com/api/character";
+  constructor(public url: string) {}
 
-  async getAll() {
-    const response = await fetch(this.url);
+  async getAll(url: string) {
+    const response = await fetch(url);
     if (!response.ok) {
       const message = `Error: ${response.status}. ${response.statusText}`;
       throw new Error(message);
