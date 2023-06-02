@@ -30,8 +30,8 @@ export default function Home() {
                     <p className={styles.name}>{item.name}</p>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </>
           );
         })}
       </ul>
