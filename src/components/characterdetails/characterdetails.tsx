@@ -13,6 +13,7 @@ export default function CharacterDetails() {
   const item: Character = character.find(
     (char) => char.id === Number(id)
   ) as Character;
+  // eslint-disable-next-line no-console
   console.log(id, character, "eeee", item);
   {
     // character.map((item) => {
@@ -28,9 +29,9 @@ export default function CharacterDetails() {
               <li>{item.name}</li>
             </div>
             <div className="character__data__secondary">
-              <li>{item.gender}</li>
-              <li>{item.species}</li>
-              <li>{item.status}</li>
+              <li>Gender: {item.gender}</li>
+              <li>Species: {item.species}</li>
+              <li>Status: {item.status}</li>
             </div>
           </div>
         </ul>
