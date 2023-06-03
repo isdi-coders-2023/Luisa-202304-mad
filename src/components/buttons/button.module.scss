@@ -34,7 +34,14 @@ button {
   letter-spacing: 0em;
 }
 
-.text_button:hover {
+.text_left_button:hover {
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+}
+
+.text_right_button:hover {
+  cursor: pointer;
   background-color: grey;
   color: white;
 }
