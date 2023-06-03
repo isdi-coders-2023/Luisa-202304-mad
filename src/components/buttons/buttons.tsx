@@ -17,10 +17,10 @@ export function Button() {
 
   return (
     <div className={styles.buttons}>
-      <button className={styles.text_button} onClick={handlePrev}>
+      <button className={styles.text_right_button} onClick={handlePrev}>
         Anterior
       </button>
-      <button className={styles.text_button} onClick={handleNext}>
+      <button className={styles.text_left_button} onClick={handleNext}>
         Siguiente
       </button>
     </div>
