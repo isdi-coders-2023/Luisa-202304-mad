@@ -28,3 +28,10 @@ export function PrevCharacterAction(payload: Character[]): CharacterAction {
     payload,
   };
 }
+
+export function FilterCharacterAction(payload: Character[]): CharacterAction {
+  return {
+    type: actionTypes.filter,
+    payload,
+  };
+}

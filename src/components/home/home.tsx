@@ -3,6 +3,7 @@ import styles from "./home.module.scss";
 import { AppContext } from "../../context/app.context";
 import { Button } from "../buttons/buttons";
 import { Link } from "react-router-dom";
+import { Filter } from "../filter/filter";
 
 export default function Home() {
   const {
@@ -11,6 +12,7 @@ export default function Home() {
 
   return (
     <div className={styles.loadedRoute}>
+      <Filter></Filter>
       <ul className={styles.app}>
         {character.map((item) => {
           return (

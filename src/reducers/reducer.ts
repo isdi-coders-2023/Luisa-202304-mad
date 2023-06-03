@@ -6,6 +6,7 @@ export type CharacterState = {
   character: Character[];
   next: string;
   prev: string;
+  filter: string;
 };
 
 export const characterReducer = (
@@ -25,6 +26,10 @@ export const characterReducer = (
     case actionTypes.prev:
       payload = action.payload as string;
       return { ...state, prev: payload };
+
+    case actionTypes.filter:
+      payload = action.payload as string;
+      return { ...state, filter: payload };
 
     default:
       return { ...state };
