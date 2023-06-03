@@ -3,7 +3,7 @@ import { AppContext } from "../../context/app.context";
 
 export function Filter(this: any) {
   const {
-    characterContext: { handleLoad, handleFilter },
+    characterContext: { handleFilter },
   } = useContext(AppContext);
 
   const handleSelect = (event: SyntheticEvent) => {
@@ -46,7 +46,12 @@ export function Filter(this: any) {
         <option value="Alien">Alien</option>
         <option value="Alien">Poopybutthole</option>
       </select>
-      <input type="textbox" name="name" onChange={handleSelect}></input>
+      <input
+        type="textbox"
+        name="name"
+        onChange={handleSelect}
+        placeholder="What r u looking 4?"
+      ></input>
     </div>
   );
 }

@@ -8,13 +8,19 @@ describe("Given the reducer characterReducer", () => {
       character: [],
       next: "",
       prev: "",
+      filter: "",
     };
 
     const action: CharacterAction = {
       type: "test",
       payload: [],
     } as unknown as CharacterAction;
-    const finalState: CharacterState = { character: [], next: "", prev: "" };
+    const finalState: CharacterState = {
+      character: [],
+      next: "",
+      prev: "",
+      filter: "",
+    };
 
     test("Then it should ...", () => {
       const newState = characterReducer(CharacterState, action);
@@ -27,13 +33,19 @@ describe("Given the reducer characterReducer", () => {
       character: [],
       next: "",
       prev: "",
+      filter: "",
     };
 
     const action: CharacterAction = {
       type: actionTypes.load,
       payload: [],
     } as unknown as CharacterAction;
-    const finalState: CharacterState = { character: [], next: "", prev: "" };
+    const finalState: CharacterState = {
+      character: [],
+      next: "",
+      prev: "",
+      filter: "",
+    };
 
     test("Then it should ...", () => {
       const newState = characterReducer(CharacterState, action);
