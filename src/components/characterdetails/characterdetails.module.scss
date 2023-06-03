@@ -1,15 +1,35 @@
 .character {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   list-style: none;
-  font-family: boogaloo;
+  font-family: boogaloo, Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  border: rgb(159, 205, 41) 6px solid;
+  border-radius: 10px;
+  width: 30%;
+  height: 25%;
+  padding: 0;
+  position: absolute;
+  left: 35%;
+}
 
-  &__character__data__image {
-    padding: 5rem;
-  }
-  &__character__data__primary {
-    display: flex;
-    font-size: 5rem;
-  }
+.character__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.character__data__primary {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-left: 8rem;
+}
+
+.character__data__seconday {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 10rem;
 }

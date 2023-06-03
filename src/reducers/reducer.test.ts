@@ -21,6 +21,7 @@ describe("Given the reducer characterReducer", () => {
       expect(newState).toEqual(finalState);
     });
   });
+
   describe("When", () => {
     const CharacterState: CharacterState = {
       character: [],
