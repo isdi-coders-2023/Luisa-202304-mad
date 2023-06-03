@@ -1,28 +1,74 @@
-@media screen and (max-width: 1200px) {
-  @media screen and (min-width: 300px) {
-    .message {
-      position: absolute;
-      display: block;
-      color: black;
-      font-family: "Electrolize", sans-serif;
+@media screen and (min-width: 300px), (max-width: 1200px) {
+  .message {
+    position: absolute;
+    display: block;
+    color: black;
+    font-family: "Electrolize", sans-serif;
 
-      font-size: 30px;
-      margin: 10px;
-      top: 200px;
-    }
+    font-size: 30px;
 
-    .error404 {
-      position: relative;
-      display: block;
-      font-size: 100px;
-      margin: 0%;
-      top: -100px;
-    }
-    p {
-      margin: 0;
-    }
-    h3 {
-      margin: 0;
-    }
+    top: 200px;
+  }
+
+  .error404 {
+    position: relative;
+    display: block;
+    font-size: 100px;
+  }
+  p {
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 300px) {
+  .message {
+    position: absolute;
+    display: block;
+    color: black;
+    font-family: "Electrolize", sans-serif;
+
+    font-size: 30px;
+
+    top: 200px;
+  }
+
+  .error404 {
+    position: relative;
+    display: block;
+    font-size: 100px;
+    top: -140px;
+  }
+  p {
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .message {
+    position: absolute;
+    display: block;
+    color: black;
+    font-family: "Electrolize", sans-serif;
+
+    font-size: 40px;
+    margin: 10px;
+  }
+
+  .error404 {
+    position: relative;
+    display: block;
+    font-size: 100px;
+    margin: 0%;
+    top: -220px;
+  }
+  p {
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
   }
 }

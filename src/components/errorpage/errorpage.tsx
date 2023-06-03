@@ -3,8 +3,8 @@ import styles from "./errorpage.module.scss";
 export default function Error() {
   return (
     <>
-      <div className={styles.message}>
-        <div className="loaded-route">
+      <div className="loaded-route">
+        <div className={styles.message}>
           <h3>THERE`S NOTHING HERE</h3>
           <p>
             Searching is pain, you better{" "}
