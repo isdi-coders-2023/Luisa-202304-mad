@@ -16,15 +16,14 @@ export default function Home() {
           return (
             <Link key={item.id} to={"/CharacterDetails/" + item.id}>
               <div className={styles.characterCard}>
-                <div className={styles.cardImage}>
-                  <img
-                    className={styles.image}
-                    src={item.image}
-                    alt={styles.characterPortrait}
-                    width={80}
-                  />
-                </div>
-                <div>
+                <img
+                  className={styles.image}
+                  src={item.image}
+                  alt={styles.characterPortrait}
+                  width={80}
+                />
+
+                <div className={styles.text}>
                   <p className={styles.id}>#{item.id}</p>
                   <p className={styles.name}>{item.name}</p>
                 </div>

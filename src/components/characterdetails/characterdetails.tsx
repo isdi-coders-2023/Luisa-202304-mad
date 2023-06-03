@@ -20,15 +20,13 @@ export default function CharacterDetails() {
     return (
       <>
         <ul className={styles.character}>
-          <div className="character__image">
-            {<img src={item.image} alt="character" />}
-          </div>
-          <div className="character__data">
-            <div className="character__data__primary">
+          <img className={styles.image} src={item.image} alt="character" />
+          <div className={styles.character__data}>
+            <div className={styles.character__data__primary}>
               <li>#{item.id}</li>
               <li>{item.name}</li>
             </div>
-            <div className="character__data__secondary">
+            <div className={styles.character__data__secondary}>
               <li>Gender: {item.gender}</li>
               <li>Species: {item.species}</li>
               <li>Status: {item.status}</li>

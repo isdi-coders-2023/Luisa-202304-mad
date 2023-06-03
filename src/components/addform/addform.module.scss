@@ -1,9 +1,12 @@
 .form {
   display: flex;
   flex-direction: column;
-  font-family: "Boogaloo", cursive;
+  font-family: "Boogaloo", Arial, Helvetica, sans-serif;
   font-size: 24px;
   min-height: 67vh;
+  &-display {
+    border: black 1 px solid;
+  }
 }
 
 .container {

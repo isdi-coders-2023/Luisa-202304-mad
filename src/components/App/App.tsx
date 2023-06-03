@@ -13,9 +13,9 @@ const options: MenuOptions = [
 export function App() {
   return (
     <>
-      <Header>
-        <Menu options={options}></Menu>
-      </Header>
+      <Header></Header>
+      <Menu options={options}></Menu>
+
       <AppRoutes></AppRoutes>
       <Footer></Footer>
     </>
