@@ -13,10 +13,7 @@ export default function CharacterDetails() {
   const item: Character = character.find(
     (char) => char.id === Number(id)
   ) as Character;
-  // eslint-disable-next-line no-console
-  console.log(id, character, "eeee", item);
   {
-    // character.map((item) => {
     return (
       <>
         <ul className={styles.character}>
