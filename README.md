@@ -1,63 +1,25 @@
 # Week 5 - Proyecto en equipo
 
-Tenéis que crear una SPA con varias 'páginas' en React, gestionando el estado común con context + reducer (useReducer). Usaremos scss + css-module y la app debe ser responsive (mobile + desktop) / mobile first.
+Trabajo hecho por equipo Luisa (Madrid-202304).
+Hemos utilizado la API de Rick & Morty:
+-> https://rickandmortyapi.com/
+Si quieres investigar por tu cuenta, editar o simplemente ver como funciona, puedes acceder a nuestro repositorio de github:
+-> https://github.com/isdi-coders-2023/Luisa-202304-mad
 
-Mínimo de páginas (vistas):
+## Componentes y responsabilidades:
 
-- Lista API pública,
-- Lista API privada
-- Detail
-- Crear ítem
-- Modificar ítem
-- Página no encontrada
+Header: Renderiza el logo y contiene la funcionalidad de ir a home.
 
-- Alguna/s de ellas se tiene que cargar mediante lazy loading.
+Menu: Renderiza el menú de navegación encargado de renderizar los diferentes componentes (Routes) usadas en nuestra SPA.
 
-La app se conectará a una **API pública** de vuestra elección y listará los elementos. En dicho listado tiene que haber paginación y también un filtro como mínimo. Filtrado en la misma página del listado. Al filtrar, no dirigimos al usuario a otra página, se queda en el listado y el listado cambia.
+Home: Renderiza la lista de personajes deseada con función de paginación y filtrado.
 
-A partir de este listado tendréis que crear otro listado conectado a una **API privada** (API local mediante JSON-server), donde implementaréis CRUD.
+Filter: Componente hijo de home, se encarga de pasarle a la funcion del repositorio la url deseada con los filtros seleccionados.
 
-- La creación y edición de item se hará con el mismo componente formulario reutilizado. La creación y la edición tienen que tener paths distintos en la URL. Cuando el usuario crea o edita, se le tiene que redirigir al listado y dar un feedback del resultado de la operación.
-- El botón de borrar tiene que estar en el mismo listado de items. Cuando el usuario borra, no se va a otra página, en el mismo listado en el que está debe desaparecer el ítem. También si queréis puede estar en la página de detalle.
+Character details: Renderiza la tarjeta de información del personaje con información detallada.
 
-La interfaz debe dar feedback de cuando se está esperando una response de las APIs, y también debe gestionar los errores de éstas.
+Buttons: Encargados de mandar la url correcta según se quiera avanzar o retroceder de página.
 
-Requisitos:
+Footer: Renderiza nombre del equipo, función estética.
 
-- Diseño en Figma
-- Listado de componentes y responsabilidades
-- Trello:
-
-  - Columnas Backlog, ToDo (Day/Sprint), In progress, Testing, Review/Que hice ayer y Done
-
-- Hacer daily:
-
-  - Qué tareas hice ayer
-  - Qué stoppers tuve
-  - Qué tareas haré hoy
-
-- Hooks de git (huskies) y GitHub Actions
-- SonarCloud, mínimo de un escaneo diario
-- Mínimo de un approvals para poder mergear PR
-- Desplegada a Netlify / Vercel
-
-- HTML semántico (validado)
-- CSS con module-css (validado)
-- Testing con coverage. Todos los tipos de tests que hemos visto.
-- Optimizada (Lighthouse en Netlify / Vercel)
-
-## Challenge WeekEnd
-
-- Seleccionar
-  - API: probarla -> consistencia / rendimiento / no pago
-- Diseño en Figma
-- Listado de componentes y responsabilidades
-- Trello:
-  - Columnas Backlog, ToDo, In progress, Review/Testing y Done
-
-Entregamos en Discord:
-
-- Nombre y url API
-- Link Figma
-- Link Trello
-- Link Listado componentes
+ErrorPage: Encargada de renderizarse cuando la ruta deseada no se encuentre y/o no esté disponible.
