@@ -28,9 +28,9 @@ describe("Given the App routes component", () => {
           </AppContext.Provider>
         </Router>
       );
-      const elements = await screen.findAllByRole("img");
+      const elements = await screen.findByText("wow");
 
-      expect(elements[0]).toBeInTheDocument();
+      expect(elements).toBeInTheDocument();
     });
   });
 });
