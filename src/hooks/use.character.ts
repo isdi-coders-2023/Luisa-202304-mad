@@ -36,8 +36,6 @@ export function useCharacter() {
     async (filter: string) => {
       const loadedCharacter = await repo.getFiltered(filter);
       const characterResults = loadedCharacter.results;
-      // eslint-disable-next-line no-console
-      console.log(loadedCharacter);
       dispatch(ac.loadCharacterAction(characterResults));
       dispatch(ac.NextCharacterAction(loadedCharacter.info.next));
       dispatch(ac.PrevCharacterAction(loadedCharacter.info.prev));

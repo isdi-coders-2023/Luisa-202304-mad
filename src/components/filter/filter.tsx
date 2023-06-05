@@ -60,9 +60,9 @@ export function Filter(this: unknown) {
       >
         <option value="human">Human</option>
         <option value="animal">Animal</option>
-        <option value="genderless">Humanoid</option>
+        <option value="humanoid">Humanoid</option>
         <option value="Alien">Alien</option>
-        <option value="Alien">Poopybutthole</option>
+        <option value="Poopybutthole">Poopybutthole</option>
       </select>
       <input
         className={styles.textbox}
