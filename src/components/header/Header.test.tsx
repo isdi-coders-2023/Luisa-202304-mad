@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import { Header } from "./Header";
+import { Header } from "../header/header";
 import { MemoryRouter } from "react-router-dom";
 describe("Header component", () => {
   test("renders header with logo", () => {
