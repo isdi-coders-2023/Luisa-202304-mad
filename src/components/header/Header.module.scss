@@ -5,6 +5,10 @@
   align-items: center;
   background-color: rgba(23, 19, 17, 1);
   min-width: 100%;
+
+  a:hover {
+    cursor: pointer;
+  }
 }
 
 .image {
