@@ -9,11 +9,16 @@
   box-shadow: 0 0 30px rgba(0, 181, 204, 1);
   border-radius: 10px;
   width: 35%;
-  height: 25%;
+  height: 20%;
   padding: 0;
   position: absolute;
   left: 30%;
   margin-top: 5rem;
+  gap: 1rem;
+}
+
+.route {
+  min-height: 55vh;
 }
 
 .character__data {
@@ -21,6 +26,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  padding: 1rem;
 }
 
 .character__data__primary {

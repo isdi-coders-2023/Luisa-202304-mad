@@ -15,20 +15,26 @@ export default function CharacterDetails() {
   ) as Character;
   {
     return (
-      <ul className={styles.character}>
-        <img className={styles.image} src={item.image} alt="character" />
-        <div className={styles.character__data}>
-          <div className={styles.character__data__primary}>
-            <li>#{item.id}</li>
-            <li>{item.name}</li>
+      <div className={styles.route}>
+        <ul className={styles.character}>
+          <img
+            className={styles.image}
+            src={item.image}
+            alt="character-portrait"
+          />
+          <div className={styles.character__data}>
+            <div className={styles.character__data__primary}>
+              <li>#{item.id}</li>
+              <li>{item.name}</li>
+            </div>
+            <div className={styles.character__data__secondary}>
+              <li>Gender: {item.gender}</li>
+              <li>Species: {item.species}</li>
+              <li>Status: {item.status}</li>
+            </div>
           </div>
-          <div className={styles.character__data__secondary}>
-            <li>Gender: {item.gender}</li>
-            <li>Species: {item.species}</li>
-            <li>Status: {item.status}</li>
-          </div>
-        </div>
-      </ul>
+        </ul>
+      </div>
     );
   }
 }
