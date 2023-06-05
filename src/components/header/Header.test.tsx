@@ -1,13 +1,15 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { Header } from "./Header";
-
+import { MemoryRouter } from "react-router-dom";
 describe("Header component", () => {
   test("renders header with logo", () => {
     render(
-      <Header>
-        <p>Test</p>
-      </Header>
+      <MemoryRouter>
+        <Header>
+          <p>Test</p>
+        </Header>
+      </MemoryRouter>
     );
 
     const logoElement = screen.getByAltText("logo");
