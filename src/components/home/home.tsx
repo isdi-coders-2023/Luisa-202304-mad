@@ -21,7 +21,7 @@ export default function Home() {
                 <img
                   className={styles.image}
                   src={item.image}
-                  alt={styles.characterPortrait}
+                  alt="Character portrait"
                   width={80}
                 />
 

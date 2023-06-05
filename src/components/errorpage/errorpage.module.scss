@@ -1,74 +1,35 @@
-@media screen and (min-width: 300px), (max-width: 1200px) {
-  .message {
-    position: absolute;
-    display: block;
-    color: black;
-    font-family: "Electrolize", sans-serif;
-
-    font-size: 30px;
-
-    top: 200px;
-  }
-
-  .error404 {
-    position: relative;
-    display: block;
-    font-size: 100px;
-  }
-  p {
-    margin: 0;
-  }
-  h3 {
-    margin: 0;
-  }
+.message {
+  display: flex;
+  color: black;
+  font-size: 30px;
+  margin: 0;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-@media screen and (min-width: 300px) {
-  .message {
-    position: absolute;
-    display: block;
-    color: black;
-    font-family: "Electrolize", sans-serif;
 
-    font-size: 30px;
-
-    top: 200px;
-  }
-
-  .error404 {
-    position: relative;
-    display: block;
-    font-size: 100px;
-    top: -140px;
-  }
-  p {
-    margin: 0;
-  }
-  h3 {
-    margin: 0;
-  }
+.error404 {
+  font-size: 100px;
+  font-family: boogaloo, Arial, Helvetica, sans-serif;
+  margin: 0;
 }
-@media screen and (min-width: 1200px) {
-  .message {
-    position: absolute;
-    display: block;
-    color: black;
-    font-family: "Electrolize", sans-serif;
 
-    font-size: 40px;
-    margin: 10px;
-  }
+.title {
+  font-family: boogaloo, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
 
-  .error404 {
-    position: relative;
-    display: block;
-    font-size: 100px;
-    margin: 0%;
-    top: -220px;
-  }
-  p {
-    margin: 0;
-  }
-  h3 {
-    margin: 0;
-  }
+.pain {
+  font-family: boogaloo, Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.image {
+  width: 35%;
+}
+
+.back {
+  margin-inline: 0.5rem;
+  color: red;
 }
